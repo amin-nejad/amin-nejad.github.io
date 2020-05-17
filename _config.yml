@@ -11,13 +11,8 @@ disqus: amin_nejad
 layout: default
 comments: true
 
-##Make sure to edit the above fields, especially for disqus.
-
 
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
 
 defaults:
   - scope:
