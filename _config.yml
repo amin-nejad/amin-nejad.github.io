@@ -1,4 +1,5 @@
 name: Ali Amin-Nejad
+title: Ali Amin-Nejad
 author: Ali Amin-Nejad
 description: Data Scientist
 baseurl: 
@@ -12,7 +13,7 @@ layout: default
 comments: true
 
 
-highlighter: pygments
+highlighter: rouge
 
 defaults:
   - scope:
