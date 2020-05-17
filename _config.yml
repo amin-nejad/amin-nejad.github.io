@@ -8,6 +8,8 @@ linkedin: http://www.linkedin.com/in/ali-amin-nejad
 email: ali[at]bitfount.com
 location: London, UK
 disqus: amin_nejad
+layout: default
+comments: true
 
 ##Make sure to edit the above fields, especially for disqus.
 
