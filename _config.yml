@@ -1,7 +1,7 @@
 name: Ali Amin-Nejad
 title: Ali Amin-Nejad
 author: Ali Amin-Nejad
-description: Data Scientist
+description: Machine Learning Engineer
 baseurl: 
 github: http://www.github.com/amin-nejad
 twitter: http://www.twitter.com/amin_nejad
@@ -12,6 +12,8 @@ disqus: amin_nejad
 layout: default
 comments: true
 
+plugins:
+    - jekyll-redirect-from
 
 highlighter: rouge
 
