@@ -12,9 +12,9 @@ disqus: amin_nejad
 layout: default
 comments: true
 
+permalink: /:categories/:year/:month/:day/:title/
 plugins:
     - jekyll-redirect-from
-
 highlighter: rouge
 
 defaults:
