@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <p class="navbar-brand">
-        <a href="{{ site.baseurl }}/">
+        <a href="{{ site.baseurl }}/" class="nounderline">
           {{ site.name }}
         </a>
       </p>
@@ -19,10 +19,13 @@
         <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
         <li><a href="{{ site.baseurl }}/cv" target="_blank">CV</a></li>
       </ul>
-      <ul id="social-wrapper">
-        <li> <a href="{{ site.twitter }}" target="_blank"><em class="fa fa-twitter-square"></em> twitter</a></li>
-        <li> <a href="{{ site.linkedin }}" target="_blank"><em class="fa fa-linkedin-square"></em> linkedin</a> </li>
-        <li> <a href="{{ site.github }}" target="_blank"><em class="fa fa-github-square"></em> github</a> </li>
+      <ul id="social-wrapper" style="list-style: none;">
+        <li> <a href="{{ site.twitter }}" target="_blank" style="text-indent: 0;"><em class="fa fa-twitter-square"></em>
+            twitter</a></li>
+        <li> <a href="{{ site.linkedin }}" target="_blank" style="text-indent: 0;"><em
+              class="fa fa-linkedin-square"></em> linkedin</a> </li>
+        <li> <a href="{{ site.github }}" target="_blank" style="text-indent: 0;"><em class="fa fa-github-square"></em>
+            github</a> </li>
       </ul>
     </div>
     <!--/.nav-collapse -->
