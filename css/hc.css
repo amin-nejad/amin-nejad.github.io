@@ -408,7 +408,33 @@ img
 
 .post
 {
-  padding-bottom:30px
+  line-height: 1.6;
+  padding-bottom:30px;
+  font-size: 140%;
+}
+
+.post h2
+{
+  padding-top:20px;
+  padding-bottom:10px;
+}
+
+.post blockquote
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top:30px;
+  padding-bottom: 30px;
+}
+
+.blog_image
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
 .user-social

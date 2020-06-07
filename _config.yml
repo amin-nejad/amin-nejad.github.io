@@ -14,7 +14,9 @@ comments: true
 
 permalink: /:categories/:year/:month/:day/:title/
 plugins:
-    - jekyll-redirect-from
+  - jekyll-redirect-from
+  - jemoji
+
 highlighter: rouge
 
 defaults:
