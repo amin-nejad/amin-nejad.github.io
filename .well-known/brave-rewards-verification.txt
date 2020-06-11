@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: amin-nejad.github.io
-Token: 7e32793f9c40cb08963b2d56aa7beb96c00a0f83fce605d8a7318570a857e55c
