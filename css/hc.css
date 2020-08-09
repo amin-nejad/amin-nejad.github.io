@@ -222,7 +222,7 @@ blockquote
   margin-left:-40px;
   margin-right:-40px;
   padding-left:40px;
-  background:#f3f3f7
+  background:#f3f3f7;
 }
 
 ul,ol
@@ -387,6 +387,14 @@ pre
   padding-top:15px
 }
 
+.contents
+{
+  font-size:22px;
+  font-weight:700;
+  padding-top:5px;
+  padding-bottom:5px
+}
+
 .meta
 {
   text-shadow:1px 1px #fff;
@@ -412,11 +420,14 @@ img
   padding-bottom:30px;
   font-size: 140%;
 }
-
+.post p
+{
+  padding-bottom: 20px;
+}
 .post h2
 {
   padding-top:20px;
-  padding-bottom:10px;
+  padding-bottom:15px;
 }
 
 .post blockquote
@@ -426,7 +437,10 @@ img
   padding-top:30px;
   padding-bottom: 30px;
 }
-
+.post blockquote p
+{
+  font-size: 150%;
+}
 .blog_image
 {
   margin-top: 30px;
@@ -434,7 +448,7 @@ img
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 100%;
 }
 
 .user-social

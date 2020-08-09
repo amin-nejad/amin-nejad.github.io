@@ -1,13 +1,21 @@
 ---
 layout: default
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 <div id="article">
   <div class="article-title">{{ page.title }}</div>
   <p class="meta">
     <small>
       &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
     </small>
-  </p> <hr/>
+  </p>
+  <hr />
+  <div class="post">
+    <div class="contents">Contents:</div>
+    {% include toc.html html=content sanitize=true h_max=3 %}
+  </div>
   <div class="post">
     {{ content }}
   </div>
