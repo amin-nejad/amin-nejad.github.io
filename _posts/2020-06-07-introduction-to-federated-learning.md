@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Federated Learning"
+title: "Introduction To Federated Learning"
 date: 2020-06-07 13:49:16
 ---
 

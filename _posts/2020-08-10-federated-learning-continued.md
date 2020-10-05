@@ -1,5 +1,5 @@
 ---
-title: "A closer look at Federated Learning"
+title: "A Closer Look At Federated Learning"
 date: 2020-08-10 17:49:16
 ---
 

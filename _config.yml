@@ -17,6 +17,7 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
+markdown: kramdown
 highlighter: rouge
 
 defaults:
