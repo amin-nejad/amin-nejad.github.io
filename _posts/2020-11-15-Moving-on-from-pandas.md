@@ -80,7 +80,7 @@ No wonder koalas has become so popular! However, the project is still relatively
 
 ### Bear in mind...
 
-Before you start switching everything from pandas to pyspark/koalas, bear in mind that running Spark locally is not the idea here. The whole point is that you have a cluster of machines running Spark with which your machine communicates and efficiently distributes the workload. There is actually a material decrease in the throughput of an individual machine in order to provide this horizontal scalability. Running Spark locally is really just there for getting to grips with it and testing your code. Actually using it on just one machine is unlikely to offer you any speedups and for smaller datasets will be _significantly_ slower.
+Before you start switching everything from pandas to pyspark/koalas, bear in mind that running Spark locally is not the idea here. The whole point is that you have a cluster of machines running Spark with which your machine communicates and efficiently distributes the workload. There is actually a material decrease in the throughput of an individual machine in order to provide this horizontal scalability. The ability to run Spark locally is really just there for getting to grips with it and testing your code. Actually using it on just one machine is unlikely to offer you any speedups and for smaller datasets will be _significantly_ slower.
 
 ## Dask
 
@@ -88,7 +88,7 @@ Another solution to this problem that you may have heard of is called `Dask`. Da
 
 So what are some of the other differences between Spark and Dask?
 
-Well, `Dask` being the newcomer (created in 2014) anticipated this question and has a web page on all the differences, which you can access [here](https://docs.dask.org/en/latest/spark.html). To summarise, not a whole lot. It's almost like choosing between `vim` and `emacs`, people tend to fervently defend whichever one it is that they've chosen but it doesn't actually matter all that much. In fact, as the Dask documentation highlights, there is nothing wrong with choosing both and deploying them on the same cluster and the same data if you want to have the best of both worlds. However, some differences worth pointing out are that Dask does not perform lazy evaluation by default and therefore can suffer from slower performance with more complex operations if the lazy evaluation feature (`dask.delayed`) is not used. Furthermore, whilst it claims to replicate the pandas API, its coverage of the API doesn't actually match that of koalas. Finally, Dask doesn't offer any machine learning or SQL querying tools out of the box like Spark, instead leaving that to the likes of scikit-learn, etc.
+Well, `Dask` being the newcomer (created in 2014) anticipated this question and has a web page on all the differences, which you can access [here](https://docs.dask.org/en/latest/spark.html). To summarise, not a whole lot. It's almost like choosing between `vim` and `emacs`, people tend to fervently defend whichever one it is that they've chosen but it doesn't actually matter all that much. In fact, as the Dask documentation highlights, there is nothing wrong with choosing both and deploying them on the same cluster and the same data if you want to have the best of both worlds. However, some differences worth pointing out are that Dask does not perform lazy evaluation by default and therefore can suffer from slower performance with more complex operations if the lazy evaluation feature (`dask.delayed`) is not used. Furthermore, whilst it claims to replicate the pandas API, its coverage of the API doesn't actually match that of koalas. Finally, Dask doesn't offer any machine learning or SQL querying tools out of the box like Spark, instead leaving that to the likes of scikit-learn, etc. Naturally, it doesn't play as nice as Spark does with the rest of the Apache suite either if this is priority for you.
 
 ### Modin
 
@@ -105,7 +105,7 @@ you can use all the cores of your machine instead of being stuck with just one. 
 
 Finally we have [`vaex`](https://github.com/vaexio/vaex). Vaex is a new project which aims to deal with big data without resorting to using clusters. It still supports out-of-core computation, lazy evaluation, a pandas-esque API and all the rest of it - but just on one machine. Their philosophy appears to be that cluster computing is overkill for the majority of problems it is used for. Unless absolutely necessary, we should try and use just one machine and avoid the overhead of managing a cluster, and vaex is just the tool to make the most of your machine.
 
-I have to say, I'm a big fan of their philosophy but of course that alone isn't a compelling enough to use their solution. So why should you use vaex? Because it's super fast. One of the creators of vaex (admittedly biased) wrote a [blog post](https://towardsdatascience.com/beyond-pandas-spark-dask-vaex-and-other-big-data-technologies-battling-head-to-head-a453a1f8cc13) benchmarking their library against the aforementioned incumbents. However what you can't argue with are hard numbers and frankly vaex smokes the rest of the pack. Only spark (both pyspark and koalas) comes close in matching it for speed. So, if speed is your primary objective and you don't care about cluster computing, use vaex.
+I have to say, I'm a big fan of this philosophy but of course that alone isn't a compelling enough reason to use their solution. So why should you use vaex? Because it's super fast. One of the creators of vaex (admittedly biased) has written a [blog post](https://towardsdatascience.com/beyond-pandas-spark-dask-vaex-and-other-big-data-technologies-battling-head-to-head-a453a1f8cc13) benchmarking their library against the aforementioned incumbents. However what you can't argue with are hard numbers and frankly vaex smokes the rest of the pack. Only spark (both pyspark and koalas) comes close in matching it for speed. So, if speed is your primary objective and you don't care about cluster computing, use vaex.
 
 ## Summary
 
@@ -136,6 +136,8 @@ _\* = What constitutes *big data* in this particular context will require some t
 
 ### Table
 
+Just to remind yourself of some of the main differences:
+
 {:class="table table-bordered"}
 | Library | pandas API | Out-of-core | Cluster | Backend |
 |:-------:|:----------:|:-----------:|:-------:|:-------:|
@@ -147,6 +149,8 @@ _\* = What constitutes *big data* in this particular context will require some t
 |   `vaex`  |     Partially     |     Yes     |      No     |   vaex  |
 
 ### Honourable Mentions
+
+Finally, just wanted to say that there are more than just the six libraries mentioned in this blog post which may have ignored some libraries in the interests of brevity. The three below deserve an honourable mention at the very least and may be the right tool for your particular use case.
 
 - [cuDF](https://github.com/rapidsai/cudf)
     - A GPU DataFrame library built on top of Apache Arrow. Definitely an interesting project. If you have GPUs that aren't being utilised for something else, might be worth trying this out
