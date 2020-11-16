@@ -123,7 +123,7 @@ graph LR
     E -->|Yes| dask[dask];
     E -->|No| F{Pandas API?};
     F -->|Yes| koalas[koalas];
-    F -->|Yes| pyspark[pyspark];
+    F -->|No| pyspark[pyspark];
     style vaex fill:#f96,stroke:#000,stroke-width:4px
     style modin fill:#f96,stroke:#000,stroke-width:4px
     style pandas fill:#f96,stroke:#000,stroke-width:4px
