@@ -114,9 +114,9 @@ To summarise, you may benefit from this makeshift flowchart. Don't take it too s
 <div class="mermaid">
 graph LR
     A[Start] --> B{Single machine?};
-    B -->|Yes| C{Speed critical?};
-    C -->|Yes| vaex[vaex];
-    C -->|No| D{Big data*?};
+    B -->|Yes| C{Speed vs Pandas API?};
+    C -->|Speed| vaex[vaex];
+    C -->|Pandas API| D{Big data*?};
     D -->|Yes| modin[modin];
     D -->|No| pandas[pandas];
     B -->|No| E{Lightweight + pythonic?}
