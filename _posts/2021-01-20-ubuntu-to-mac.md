@@ -46,35 +46,35 @@ You will likely be used to `apt` but with mac you ought to switch to using `home
 
 macOS comes with a python 2.7 installation. If like most pythonistas, you use 3.x, you may consider uninstalling it. **Do <ins>NOT</ins> uninstall it.** I don't know why but it can break your entire OS. More information [here](https://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4). Just leave it be and set up whatever python you want in virtual environments.
 
-On that note, many people have reported problems getting `pyenv` (or virtual environments in general) to work probably on the M1, and consequently libraries installed in the environment. I've somehow managed to avoid this entirely by using `conda` for my virtual environments. I tend not to install packages with `conda` if I can avoid it though (despite their recommendations) and just use `pip` within the `conda` environment. I haven't had any problems with my environment or any libraries as a consequence.
+On that note, many people have reported problems getting `pyenv` (or virtual environments in general) to work properly on the M1, and consequently libraries installed in the environment. I've somehow managed to avoid this entirely by using `conda` for my virtual environments. I tend not to install packages with `conda` if I can avoid it though (despite their recommendations) and just use `pip` within the `conda` environment. I haven't had any problems with my environment or any libraries as a consequence.
 
 ### Deep learning libraries
 
-Assuming you've followed what I've done above, you should be able to install `tensorflow` and `pytorch` without a problem using `pip` as standard. However, their performance is another matter indeed.
+Assuming you've followed what I've done above, you should be able to install `tensorflow` and `pytorch` without a problem using `pip` as standard. However, their performance is another matter entirely.
 
 #### **Tensorflow**
 
 Apple has kindly provided a [fork](https://github.com/apple/tensorflow_macos) of `tensorflow` which has been adapted to run on Apple silicon natively without needing Rosetta. If you install this version of `tensorflow` (instead of using pip as described above), you should be able to enjoy the significant speedups that the M1 offers.
 
-You can find various posts online benchmarking M1 performance but the best one I've come across is [this one](https://towardsdatascience.com/benchmark-m1-vs-xeon-vs-core-i5-vs-k80-and-t4-e3802f27421c) which compares Apple's `tensorflow` fork against regular `tensorflow` on GPUs. The chart below(reproduced from the benchmarking blog post) shows how the M1 compares against Nvidia's K80 and T4 GPUs at training 3 different models using 3 different batch sizes.
+You can find various posts online benchmarking M1 performance but the best one I've come across is [this one](https://towardsdatascience.com/benchmark-m1-vs-xeon-vs-core-i5-vs-k80-and-t4-e3802f27421c) which compares Apple's `tensorflow` fork against regular `tensorflow` on GPUs. The chart below (reproduced from the blog post) shows how the M1 compares against Nvidia's K80 and T4 GPUs at training 3 different models using 3 different batch sizes.
 
 <img class="blog_image" src="/images/m1-tensorflow.png">
 
 We learn a few things about the M1 from this chart compared to the Nvidia GPUs:
 
-- it does much better at smaller batch sizes significantly beating the K80 and rivalling the T4
-- the performance boost at higher batch sizes is very gradualmuch smaller e.g. increasing the batch size by 4 orders of magnitude (32 to 512) training the LSTM only offers a 3x speedup for the M1 but both the K80 and T4 get a 6X speedup
+- it does much better at smaller batch sizes, significantly beating the K80 and rivalling the T4
+- the performance boost at higher batch sizes is very gradual e.g. increasing the batch size by 4 orders of magnitude (32 to 512) when training the LSTM only offers a 3x speedup for the M1 but both the K80 and T4 get a 6x speedup
 - it performs comparatively worse at convolutions where it is actually significantly slower than the K80 at larger batch sizes
 
 #### **Pytorch**
 
-Unfortunately the situation is rather different with `pytorch`. There is no Apple fork and `pytorch` itself does not yet support Apple silicon so we are stuck with using Rosetta which significantly hampers our performance. There is a lot of discussion about this on github, [this](https://github.com/pytorch/pytorch/issues/47702) is the best thread to follow going forward.
+Unfortunately the situation is rather different with `pytorch`. There is no Apple fork and `pytorch` itself does not yet support Apple silicon so we are stuck with using Rosetta which significantly hampers our performance. There is a lot of discussion about this on github. [This](https://github.com/pytorch/pytorch/issues/47702) is the best thread to follow regarding this issue going forward.
 
 I don't have any official benchmark stats but in my experience so far, `pytorch` performance on the M1 is comparable to my previous machine. If anything, it might actually be a little slower but nothing significant.
 
 ## VS Code
 
-I use VS Code as my IDE the vast majority of the time. This doesn't support M1 yet either and so is actually noticeably slower than my previous machine. Not frustratingly so, just noticeably so. However support has been introduced in the bleeding edge version known as [VS Code Insiders](https://code.visualstudio.com/insiders/#osx). Having tried it out briefly, I didn't notice much of a difference so decided to stay with the stable release and just wait for it to be supported.
+I use VS Code as my IDE the vast majority of the time. This doesn't support M1 yet either and so is actually noticeably slower than my previous machine. Not frustratingly so, just noticeably so. However support has been introduced in the bleeding edge version known as [VS Code Insiders](https://code.visualstudio.com/insiders/#osx). Having tried it out briefly, I didn't notice much of a difference to be honest so I decided to stay with the stable release and just wait for the mac ARM version.
 
 A few issues I've encountered so far:
 
@@ -96,11 +96,11 @@ The situation is quite good here. Chrome and others (e.g. [Brave](https://brave.
 
 Nothing to do with developing really but it's worth mentioning how good:
 
-- the battery life is. I can easily work a full day on a single charge and still have plenty of battery left at the end of it. It's unbelievable. The fan is extremely quiet too and it doesn't get hot either.
+- the battery life is. I can easily work a full day on a single charge and still have plenty of battery left at the end of it which is still surprises me. The fan is extremely quiet too and it doesn't get hot either.
 
-- the display is. The 4k retina display is almost too indulgent. Not really a game changer but it's a nice-to-have
+- the display is. The 4k retina display is almost too indulgent. Not really a game changer but it's definitely a nice-to-have
 
-- [Alfred](https://www.alfredapp.com/) is. It's a productivity app which just makes your life easier only available on Mac
+- [Alfred](https://www.alfredapp.com/) is. It's a productivity app which just makes your life easier (only available on mac)
 
 # Final thoughts
 
