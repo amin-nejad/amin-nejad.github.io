@@ -1,5 +1,3 @@
-This website uses the Herring Cove Jekyll template as detailed below.
-
 Herring Cove
 ============
 
