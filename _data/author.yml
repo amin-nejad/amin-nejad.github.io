@@ -1,0 +1,20 @@
+name: Ali Amin-Nejad
+dp: assets/icons/profile.png
+description: >
+  <p>
+    Software Engineer and AI Enthusiast, erstwhile Banker and Medical Student.
+  </p>
+  <br/>
+
+email: ali@amin-nejad.com
+contact:
+  - title: linkedin
+    url: https://www.linkedin.com/in/amin-nejad/
+  - title: github
+    url: https://github.com/amin-nejad
+  - title: twitter
+    url: https://twitter.com/amin_nejad
+  - title: stackoverflow
+    url: https://stackoverflow.com/users/10625420/amin-nejad
+  - title: email
+    url: mailto:ali@amin-nejad.com
