@@ -1,7 +1,7 @@
 ---
 title: "Introduction To Federated Learning"
 date: 2020-06-07 13:49:16
-categories: ["federated-learning", "ai"]
+categories: ["federated_learning", "ai"]
 ---
 
 ## Introduction

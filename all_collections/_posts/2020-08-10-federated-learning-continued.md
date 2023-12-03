@@ -1,7 +1,7 @@
 ---
 title: "A Closer Look At Federated Learning"
 date: 2020-08-10 17:49:16
-categories: ["federated-learning", "ai"]
+categories: ["federated_learning", "ai"]
 ---
 
 This blog post is Part 2 of a two-part series on Federated Learning (FL). Part 1 was more of a high-level introduction which just introduced the concept and its applications, which you can [read here](https://amin-nejad.github.io/2020/06/07/introduction-to-federated-learning/). In this post, we will delve a little deeper into FL and introduce some privacy-preserving technologies commonly related to FL and why they are used.

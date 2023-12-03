@@ -1,7 +1,7 @@
 ---
 title: "Federated Learning @ ICLR 2021"
 date: 2021-05-17 00:00:00
-categories: ["federated-learning", "ai", "iclr"]
+categories: ["federated_learning", "ai", "iclr"]
 ---
 
 ## Introduction
