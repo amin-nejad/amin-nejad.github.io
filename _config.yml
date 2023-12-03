@@ -1,33 +1,26 @@
-name: Ali Amin-Nejad
-title: Ali Amin-Nejad's Blog
-author: Ali Amin-Nejad
-description: Machine Learning Engineer
-github: http://www.github.com/amin-nejad
-twitter: http://www.twitter.com/amin_nejad
-linkedin: http://www.linkedin.com/in/amin-nejad
-email: ali[at]bitfount.com
-location: London, UK
-disqus: amin_nejad
-layout: default
-comments: true
+title: Ali Amin-Nejad
+markdown: kramdown
 
-permalink: /:categories/:year/:month/:day/:title/
+# for atom feed
+author:
+  name: Ali Amin-Nejad
+  email: ali@amin-nejad.com
+
 plugins:
-  - jekyll-redirect-from
   - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
 
-markdown: kramdown
-highlighter: rouge
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
 
 defaults:
   - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "posts"
+      path: "_posts"
     values:
       layout: "post"
+      permalink: /posts/:title/
+exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
