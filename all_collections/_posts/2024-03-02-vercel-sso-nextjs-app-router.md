@@ -63,7 +63,7 @@ That's all! Once you've filled in these fields, you can click the "Save Changes"
 
 ## Set up the Next.js App
 
-Now that we have the SSO server and connection set up, it's time to set up the Next.js app. For this, we will be using the new Next.js App Router which became stable in v13.4. The Next.js App Router is a new feature in Next.js that completely changes how you set up pages and API routes. The old way is still supported but it is recommended for new projects to use the new way. To create this project we are going to use the Next.js CLI. To do this, we're just going to run the following command in the terminal:
+Now that we have the SSO server and connection set up, it's time to set up the Next.js app. For this, we will be using the new Next.js App Router which became stable in v13.4. The Next.js App Router is a new feature in Next.js that completely changes how you set up pages and API routes. The old way is still supported but it is recommended for new projects to use the App router. To create this project we are going to use the Next.js CLI. To do this, we're just going to run the following command in the terminal:
 
 ```bash
 yarn create next-app
@@ -77,11 +77,7 @@ We will be using the `next-auth` package to set up the SSO for the Next.js app. 
 yarn add next-auth
 ```
 
-Boxy HQ has an example repo for setting up `next-auth` with Jackson (here)[https://github.com/boxyhq/jackson-examples/tree/main/apps/next-auth] but it's a little old so they're not using the new Next.js App Router. However it is still a valuable resource and is actually deployed here: https://saml-demo.boxyhq.com/ so you can see what the end result could look like.
-
-```bash
-
-```
+Boxy HQ has an example repo for setting up `next-auth` with Jackson (here)[https://github.com/boxyhq/jackson-examples/tree/main/apps/next-auth] but it's a little old so they're not using the App Router. However it is still a valuable resource and is actually deployed here: https://saml-demo.boxyhq.com/ so you can see what the end result could look like.
 
 ## Pro-tips
 
