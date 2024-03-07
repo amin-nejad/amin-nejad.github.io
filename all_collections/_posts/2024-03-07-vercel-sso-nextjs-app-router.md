@@ -162,7 +162,7 @@ If you don't create a custom login page, users will be forced to login using the
 
 Granted, the difference is not huge in this case, but if you have a brand, you will want to customize the login page to match your brand and display your logo, etc.
 
-Finally, the code for the whole app can be found here: https://github.com/amin-nejad/next-auth-demo. Simply clone, it, run `yarn` followed by `yarn dev` and navigate to `http://localhost:3000` to see the app in action. Aside from the homepage and the login page, there is one authenticated page and one authenticated API endpoint just to demonstrate how to protect pages and API routes using next-auth. The authenticated page is at `/test` and the authenticated API endpoint is at `/api/protected`. You can see that the `getSession` function from next-auth is used to protect these routes.
+Finally, the code for the whole app can be found here: [https://github.com/amin-nejad/next-auth-demo](https://github.com/amin-nejad/next-auth-demo). Simply clone, it, run `yarn` followed by `yarn dev` and navigate to `http://localhost:3000` to see the app in action. Aside from the homepage and the login page, there is one authenticated page and one authenticated API endpoint just to demonstrate how to protect pages and API routes using next-auth. The authenticated page is at `/test` and the authenticated API endpoint is at `/api/protected`. You can see that the `getSession` function from next-auth is used to protect these routes.
 
 ## Pro-tip
 
