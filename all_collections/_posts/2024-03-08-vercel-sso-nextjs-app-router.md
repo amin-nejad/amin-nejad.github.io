@@ -1,6 +1,6 @@
 ---
 title: "Setting up SSO on Vercel (with Next.js App Router and TypeScript)"
-date: 2024-02-03 15:49:16
+date: 2024-03-08 15:49:16
 categories: ["vercel", "sso", "nextjs"]
 ---
 
